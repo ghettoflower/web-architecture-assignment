@@ -1,6 +1,4 @@
 <?php
-echo "Today is " . date("Y/m/d") . "<br>";
-echo "Today is " . date("Y.m.d") . "<br>";
-echo "Today is " . date("Y-m-d") . "<br>";
-echo "Today is " . date("l");
+echo "Today's date is  " . date("d/m/Y") . "<br>";
+echo "And the time is " . date("h:i:sa") . "<br>";
 ?>
