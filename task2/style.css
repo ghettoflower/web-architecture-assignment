@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+
+body{
+    margin: 0;
+    background-image: url('Images/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+.container{
+    width: 80%; /*width of box*/
+    margin: auto; /*centers everything*/
+}
+
+/*------------------------------------------CODE FOR HEADER---------------------------------------------------------*/
+
+/*Header color*/
+header{
+    background-color: rgba(255,255,255,0);
+}
+
+
+/*To fix header being ignored because of float */
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+/*Moves header categories to the right*/
+nav{
+    float: right;
+}
+
+/*cleaning list*/
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/*list placement (next to each other)*/
+nav li{
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 35px;
+    position: relative;
+}
+
+/*Header categories*/
+nav ul > li > a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+/*when hovering over header categories*/
+nav ul > li > a:hover{
+    color: rgb(102,12,35); 
+}
+
+/*Creates the line for animation and the animation*/
+nav a::before{
+    content: '';
+    display: block;
+    height: 5px;    
+    background-color: rgb(102,12,35);
+
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+/*hides the line*/
+nav a:hover::before{
+    width: 100%;
+}
+
+/* box for over book now */
+.boxed{
+    background: rgb(102,12,35);    
+    padding: 20px; 
+    color: white;
+}
+/*----------------------------------------END CODE FOR HEADER---------------------------------------------------------*/
+
+.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    position: relative; /* Declared position allows for location changes */
+    top: -20px; /* Moves image upwards */
+}
+
+.greetings{
+    font-weight: 100px;
+    font-size: 100px;
+    text-align: center;
+}
