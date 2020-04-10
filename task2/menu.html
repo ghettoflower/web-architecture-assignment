@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bistro MJN</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
     <header> <!-- Navigation bar-->
@@ -25,7 +22,61 @@
     </header>
 
     <div id="content">
-        
+        <div class="menu-tab">
+            <button class="tablinks" onclick="category(event, 'All')" id="default">All</button>
+            <button class="tablinks" onclick="category(event, 'Starters')">Starters</button>
+            <button class="tablinks" onclick="category(event, 'Burgers')">Burgers</button>
+            <button class="tablinks" onclick="category(event, 'Steak')">Steak</button>
+            <button class="tablinks" onclick="category(event, 'Pizza')">Pizza</button>
+        </div>
+
+        <div id="All" class="tabcontent">
+            <h3>All tha food</h3>
+            <p>Kollox</p>
+        </div>
+        <div id="Starters" class="tabcontent">
+            <h3>Starter food</h3>
+            <p>Garlic bread</p>
+        </div>
+        <div id="Burgers" class="tabcontent">
+            <h3>Diabetes-inducing food</h3>
+            <p>Krabby Patty</p>
+        </div>
+        <div id="Steak" class="tabcontent">
+            <h3>Meat</h3>
+            <p>Kill the cow</p>
+        </div>
+        <div id="Pizza" class="tabcontent">
+            <h3>Italiano</h3>
+            <p>Badabing</p>
+        </div>
     </div>
+
+    <script>
+        function category(evt, cityName) {
+
+            //https://www.w3schools.com/howto/howto_js_tabs.asp
+            var i, tabcontent, tablinks; //Declare variables
+
+            //Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            }
+            
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+        }
+        // Get the element with id="default" and click on it
+        document.getElementById("default").click();
+    </script>
 </body>
 </html>
