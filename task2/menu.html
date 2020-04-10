@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bistro MJN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <header> <!-- Navigation bar-->
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reservation.html" class="boxed">Reservation</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="content">
+        <article>
+            <div class="food-select">
+                <ul class="nav nav-pills nav-left hidden-xs" role="tablist">
+                    <li class="active" role="presentation">
+                        <a role="tab" data-toggle="tab" aria-expanded="true" href="#all" class="js-tabcollapse-panel-heading collapsed">All</a></li>
+                    <li><a data-toggle="tab" href="#starters">Starters</a></li>
+                    <li><a data-toggle="tab" href="#burgers">Burgers</a></li>
+                    <li><a data-toggle="tab" href="#steak">Steak</a></li>
+                    <li><a data-toggle="tab" href="#pizza">Pizza</a></li>
+                </ul>
+            </div>
+
+            <div class="menu-items">
+                <div id="all" class="tab-pane fade in active">
+                    <h3>ALL HAQ ALLA ITEMS</h3>
+                    <p>I fucking hate this</p>
+                </div>
+                <div id="starters" class="tab-pane fade">
+                    <h3>Starters</h3>
+                    <p>Delicious yum yum starters</p>
+                </div>
+
+                <div id="burgers" class="tab-pane fade">
+                    <h3>Burgers</h3>
+                    <p>Krabby Patties</p>
+                </div>
+
+                <div id="steak" class="tab-pane fade">
+                    <h3>Steak</h3>
+                    <p>Only the best beef</p>
+                </div>
+
+                <div id="pizza" class="tab-pane fade">
+                    <h3>Pizza</h3>
+                    <p>Badabing BADA-BOOM</p>
+                </div>
+            </div>
+        </article>
+    </div>
+</body>
+</html>

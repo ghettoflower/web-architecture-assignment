@@ -2,7 +2,7 @@
 
 body{
     margin: 0;
-    background-image: url('Images/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg');
+    background-color: #ececec;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top;
@@ -13,6 +13,10 @@ body{
 .container{
     width: 80%; /*width of box*/
     margin: auto; /*centers everything*/
+}
+
+#home-page { /*Background image will only appear on home page*/
+    background-image: url('Images/burger-and-vegetables-placed-on-brown-wood-surface-1565982.jpg');
 }
 
 /*------------------------------------------CODE FOR HEADER---------------------------------------------------------*/
@@ -103,4 +107,35 @@ nav a:hover::before{
     font-weight: 100px;
     font-size: 100px;
     text-align: center;
+}
+
+/*----------------------For Menu---------------------------*/
+
+.food-select{
+    width: 80%; /*width of box*/
+    margin: auto; /*centers everything*/
+}
+
+.food-select a{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 17px;
+    border-radius: 5px;
+}
+
+.food-select a:hover{
+    color: white;
+    background-color: #660C23;
+}
+
+.food-select a:active{
+    color: white;
+    background-color: #660C23;
+}
+
+.menu-items{
+    color: #ECECEC;
 }
